@@ -1,19 +1,15 @@
-<template>
-  <div>
-    <p class="card">
-      {{text}}
-    </p>
-  </div>
+<template lang="pug">
+  div
+    p.card {{text}}
 </template>
 
 <script>
 export default {
-  props: ['text']
-}
+  props: ['text'],
+};
 </script>
 
-<style>
-.card {
-  padding: 10px;
-}
+<style lang="stylus">
+.card
+  padding 10px
 </style>
