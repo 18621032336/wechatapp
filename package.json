@@ -14,9 +14,11 @@
     "dev": "node build/dev-server.js wx",
     "start": "npm run dev",
     "build": "node build/build.js wx",
+    "add": "node build/add-page.js",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "mockjs": "^1.0.1-beta3",
     "mpvue": "^1.0.11",
     "pug": "^2.0.3",
     "stylus": "^0.54.5",

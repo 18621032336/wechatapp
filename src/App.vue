@@ -5,14 +5,13 @@ export default {
     const logs = wx.getStorageSync('logs') || [];
     logs.unshift(Date.now());
     wx.setStorageSync('logs', logs);
-
-    console.log('app created and cache logs by setStorageSync');
   },
 };
 </script>
 
 <style lang="stylus">
 @import 'stylus/base.styl'
+@import 'stylus/iconfont.styl'
 @import 'stylus/variable.styl'
 .container
   height 100%

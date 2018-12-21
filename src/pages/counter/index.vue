@@ -2,8 +2,9 @@
   div.counter-warp
     p Vuex counter：{{ count }}
     p
-      button(@click="increment") +
-      button(@click="decrement") -
+      div(@click="increment")
+        span.iconfont.icon-plus
+      div(@click="decrement") -
 
     a.home(href="/pages/index/main") 去往首页
 </template>

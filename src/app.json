@@ -9,5 +9,11 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "i-button": "../static/iview/button/index",
+    "i-cell-group": "../static/iview/cell-group/index",
+    "i-avatar": "../static/iview/avatar/index",
+    "i-cell": "../static/iview/cell/index"
   }
 }

@@ -1,7 +1,8 @@
 <template lang="pug">
   div.container(@click="clickHandle('test click', $event)")
     div.userinfo(@click="bindViewTap")
-      img.userinfo-avatar(v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover")
+      i-avatar(v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" size="large")
+      //- img.userinfo-avatar(v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover")
       div.userinfo-nickname
         card(:text="userInfo.nickName")
 
@@ -13,16 +14,22 @@
       input.form-control(type="text" v-model="motto" placeholder="v-model")
       input.form-control(type="text" v-model.lazy="motto" placeholder="v-model.lazy")
     a.counter(href="/pages/counter/main") 去往Vuex示例页面
+    i-cell-group.group
+      i-cell(title="去往Vuex示例页面" is-link url="/pages/counter/main")
+    div(v-for="(item, index) in list" :key="index") {{item.name}}
 </template>
 
 <script>
 import card from '@/components/card';
+import { message } from '@/utils/toast';
+import { post, get } from '@/utils/request';
 
 export default {
   data() {
     return {
       motto: 'Hello World',
       userInfo: {},
+      list: [],
     };
   },
 
@@ -48,13 +55,20 @@ export default {
       });
     },
     clickHandle(msg, ev) {
-      console.log('clickHandle:', msg, ev);
+      message('clickHandle:', msg, ev);
     },
   },
 
   created() {
     // 调用应用实例的方法获取全局数据
     this.getUserInfo();
+  },
+  async onShow() {
+    message(post.toString());
+
+    // 获取数据
+    const res = await get('gb/products');
+    this.list = res.results;
   },
 };
 </script>
@@ -84,4 +98,6 @@ export default {
   padding 5px 10px
   color blue
   border 1px solid blue
+.group
+  width 100%
 </style>
