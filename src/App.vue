@@ -10,9 +10,9 @@ export default {
 </script>
 
 <style lang="stylus">
-@import 'stylus/base.styl'
-@import 'stylus/iconfont.styl'
-@import 'stylus/variable.styl'
+@import 'styles/base.styl'
+@import 'styles/iconfont.styl'
+@import 'styles/variable.styl'
 .container
   height 100%
   display flex

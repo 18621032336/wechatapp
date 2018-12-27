@@ -7,7 +7,7 @@ const PRO_API_URL = 'https://api.yimishiji.com/';
 export const BASE_URL = process.env.NODE_ENV === 'production' ? PRO_API_URL : TEST_API_URL;
 
 // 是否使用 mock 数据
-export const MOCK_DATA = false;
+export const MOCK_DATA = wx.getStorageSync('MOCK_DATA');
 
 export default {
   BASE_URL,

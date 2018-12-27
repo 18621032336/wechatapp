@@ -22,7 +22,9 @@ npm run add name
 npm run build --report
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## 源码地址
+
+[http://10.211.62.41:82/FE/mpvue-template](http://10.211.62.41:82/FE/mpvue-template)
 
 
 ## 目录结构
@@ -33,6 +35,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
  ┣ 📂dist // 输出小程序用的 wxml 等文件
  ┣ 📂node_modules
  ┣ 📂src
+ ┃ ┣ 📂assets // 图片
  ┃ ┣ 📂components // 组件
  ┃ ┣ 📂pages // 页面
  ┃ ┃ ┣ 📂counter // vuex 示例
@@ -46,7 +49,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
  ┃ ┃ ┃ ┣ 📜index.vue
  ┃ ┃ ┃ ┣ 📜main.js
  ┃ ┃ ┃ ┗ 📜main.json
- ┃ ┣ 📂stylus // stylus 基础文件
+ ┃ ┣ 📂styles // styles 基础文件
  ┃ ┃ ┣ 📜base.styl // 全局公共 class
  ┃ ┃ ┣ 📜iconfont.styl // 字体图标
  ┃ ┃ ┣ 📜reset.styl // 重置默认样式
@@ -64,12 +67,10 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
  ┃ ┣ 📂e2e
  ┃ ┣ 📂unit
  ┃ ┗ 📂mock // mock 数据
- ┣ 📜.babelrc
  ┣ 📜.editorconfig
  ┣ 📜.eslintignore
  ┣ 📜.eslintrc.js
  ┣ 📜.gitignore
- ┣ 📜.postcssrc.js
  ┣ 📜index.html
  ┣ 📜package.json
  ┣ 📜package.swan.json
@@ -85,7 +86,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
  - `vuex`
  - `pug // template 设置 lang="pug" 否则使用原生 html` 不可使用 wxml
  - `stylus // style 设置 lang="stylus" 否则使用原生 css`
- - `iconfont // 含一个默认图标库，可以覆盖 stylus/iconfont.styl 修改`
+ - `iconfont // 含一个默认图标库，可以覆盖 styles/iconfont.styl 修改`
  - `iview // 在 app.json、或者页面.json 中配置需要哪些组件` 
  - `mock // static.js 中设置 MOCK_DATA = true`
 
