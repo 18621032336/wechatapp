@@ -11,23 +11,23 @@
 
 <script>
 // Use Vuex
-import store from './store';
+import store from './store'
 
 export default {
   computed: {
-    count() {
-      return store.state.count;
-    },
+    count () {
+      return store.state.count
+    }
   },
   methods: {
-    increment() {
-      store.commit('increment');
+    incremen () {
+      store.commit('increment')
     },
-    decrement() {
-      store.commit('decrement');
-    },
-  },
-};
+    decrement () {
+      store.commit('decrement')
+    }
+  }
+}
 </script>
 
 <style lang="stylus">

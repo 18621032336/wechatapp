@@ -29,53 +29,53 @@ npm run build --report
 
 ## 目录结构
 ```
-📦{{name}}
- ┣ 📂build  // webpack 配置
- ┣ 📂config // html 2 wxml， wxss 2 css 等配置 
- ┣ 📂dist // 输出小程序用的 wxml 等文件
- ┣ 📂node_modules
- ┣ 📂src
- ┃ ┣ 📂assets // 图片
- ┃ ┣ 📂components // 组件
- ┃ ┣ 📂pages // 页面
- ┃ ┃ ┣ 📂counter // vuex 示例
- ┃ ┃ ┃ ┣ 📜index.vue
- ┃ ┃ ┃ ┣ 📜main.js
- ┃ ┃ ┃ ┗ 📜store.js
- ┃ ┃ ┣ 📂index // 普通示例页面
- ┃ ┃ ┃ ┣ 📜index.vue
- ┃ ┃ ┃ ┗ 📜main.js
- ┃ ┃ ┗ 📂logs // 普通示例页面
- ┃ ┃ ┃ ┣ 📜index.vue
- ┃ ┃ ┃ ┣ 📜main.js
- ┃ ┃ ┃ ┗ 📜main.json
- ┃ ┣ 📂styles // styles 基础文件
- ┃ ┃ ┣ 📜base.styl // 全局公共 class
- ┃ ┃ ┣ 📜iconfont.styl // 字体图标
- ┃ ┃ ┣ 📜reset.styl // 重置默认样式
- ┃ ┃ ┗ 📜variable.styl // 样式变量
- ┃ ┣ 📂utils
- ┃ ┃ ┣ 📜index.js
- ┃ ┃ ┣ 📜request.js // wx.request 二次封装
- ┃ ┃ ┣ 📜static.js // 静态变量配置
- ┃ ┃ ┗ 📜toast.js // 简化 wx 弹框
- ┃ ┣ 📜app.json // 页面配置
- ┃ ┣ 📜App.vue // 全局入口文件
- ┃ ┗ 📜main.js
- ┣ 📂static
- ┣ 📂tes
- ┃ ┣ 📂e2e
- ┃ ┣ 📂unit
- ┃ ┗ 📂mock // mock 数据
- ┣ 📜.editorconfig
- ┣ 📜.eslintignore
- ┣ 📜.eslintrc.js
- ┣ 📜.gitignore
- ┣ 📜index.html
- ┣ 📜package.json
- ┣ 📜package.swan.json
- ┣ 📜project.config.json
- ┗ 📜README.md
+{{name}}
+ ├── build  // webpack 配置
+ ├── config // html 2 wxml， wxss 2 css 等配置 
+ ├── dist // 输出小程序用的 wxml 等文件
+ ├── node_modules
+ ├── src
+ │   ├── assets // 图片
+ │   ├── components // 组件
+ │   ├── pages // 页面
+ │   │   ├── counter // vuex 示例
+ │   │   │   ├── index.vue
+ │   │   │   ├── main.js
+ │   │   │   └── store.js
+ │   │   ├── index // 普通示例页面
+ │   │   │   ├── index.vue
+ │   │   │   └── main.js
+ │   │   └── logs // 普通示例页面
+ │   │   │   ├── index.vue
+ │   │   │   ├── main.js
+ │   │   │   └── main.json
+ │   ├── styles // styles 基础文件
+ │   │   ├── base.styl // 全局公共 class
+ │   │   ├── iconfont.styl // 字体图标
+ │   │   ├── reset.styl // 重置默认样式
+ │   │   └── variable.styl // 样式变量
+ │   ├── utils
+ │   │   ├── index.js
+ │   │   ├── request.js // wx.request 二次封装
+ │   │   ├── static.js // 静态变量配置
+ │   │   └── toast.js // 简化 wx 弹框
+ │   ├── app.json // 页面配置
+ │   ├── App.vue // 全局入口文件
+ │   └── main.js
+ ├── static
+ ├── tes
+ │   ├── e2e
+ │   ├── unit
+ │   └── mock // mock 数据
+ ├── .editorconfig
+ ├── .eslintignore
+ ├── .eslintrc.js
+ ├── .gitignore
+ ├── index.html
+ ├── package.json
+ ├── package.swan.json
+ ├── project.config.json
+ └── README.md
  ```
 
 ## 项目特性&支持的功能

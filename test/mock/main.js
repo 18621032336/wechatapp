@@ -1,33 +1,32 @@
-import mockjs from 'mockjs';
+import mockjs from 'mockjs'
 
 // key=url  value=result
 const dataMap = {
   'test/list': {
     'id|1-100.1-10': 1,
     'age|1-100.1-10': 1,
-    'name|String': 'zkx',
+    'name|String': 'zkx'
   },
   'gb/products': {
     'results|10': [
       {
         name: '@now()',
-        date: '@now()',
-      },
-    ],
-  },
-};
+        date: '@now()'
+      }
+    ]
+  }
+}
 
-
-export function mock(url) {
+export function mock (url) {
   return new Promise((resolve, reject) => {
     try {
-      resolve(mockjs.mock(dataMap[url]));
+      resolve(mockjs.mock(dataMap[url]))
     } catch (e) {
-      reject();
+      reject(e)
     }
-  });
+  })
 }
 
 export default {
-  mock,
-};
+  mock
+}

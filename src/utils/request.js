@@ -1,21 +1,22 @@
-import { BASE_URL, MOCK_DATA } from './static';
+import { BASE_URL, MOCK_DATA } from './static'
 
-import { mock } from '../../test/mock/main';
+import { mock } from '../../test/mock/main'
+
+const DefaultHeader = {
+  'Content-Type': 'application/x-www-form-urlencoded'
+}
 
 /**
  * post 请求
  * @param url
  * @param data
  * @param header
+ * @param method get 请求可以复用
  */
-export function post({
-  url,
-  data,
-  header,
-  method = 'post',
-}) {
+export function post (url, data, method = 'post', header = DefaultHeader) {
+  // 返回 mock 数据
   if (MOCK_DATA) {
-    return mock(url, data);
+    return mock(url, data)
   }
 
   return new Promise((resolve, reject) => {
@@ -25,38 +26,28 @@ export function post({
       header,
       method,
       dataType: 'json',
-      success(res) {
-        resolve(res.data);
+      success (res) {
+        resolve(res.data)
       },
-      fail(e) {
-        reject(e);
-      },
-    });
-  });
+      fail (e) {
+        reject(e)
+      }
+    })
+  })
 }
 
 /**
  * get 请求
  * @param url
  * @param data
- * @param header
  */
-export function get(params) {
-  let { url, data, header } = params;
-  if (typeof params === 'string') {
-    url = params;
-    data = {};
-    header = {};
-  }
-  return post({
-    url,
-    data,
-    header,
-    method: 'get',
-  });
+export function get (url, data) {
+  return post(url, data, 'get')
 }
 
 export default {
-  post,
-  get,
-};
+  install (Vue) {
+    Vue.prototype.$get = get
+    Vue.prototype.$post = post
+  }
+}
