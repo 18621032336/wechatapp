@@ -24,7 +24,7 @@ npm run build --report
 
 ## 源码地址
 
-[http://10.211.62.41:82/FE/mpvue-template](http://10.211.62.41:82/FE/mpvue-template)
+[https://github.com/18621032336/wechatapp](https://github.com/18621032336/wechatapp)
 
 
 ## 目录结构
